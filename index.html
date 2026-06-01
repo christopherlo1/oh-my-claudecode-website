@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="oh-my-claudecode - A weapon, not a tool. Multi-agent orchestration plugin for Claude Code with 19 specialized agents and 36 skills.">
+  <meta name="description" content="oh-my-claudecode - A weapon, not a tool. Multi-agent orchestration plugin for Claude Code with 19 specialized agents and 39 skills.">
   <meta name="keywords" content="Claude Code, AI agents, multi-agent, orchestration, automation, CLI, developer tools">
   <meta name="author" content="oh-my-claudecode">
 
@@ -11,7 +11,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://yeachan-heo.github.io/oh-my-claudecode-website/">
   <meta property="og:title" content="oh-my-claudecode - A weapon, not a tool">
-  <meta property="og:description" content="Multi-agent orchestration plugin for Claude Code. 19 specialized agents, 36 skills, full autonomous execution.">
+  <meta property="og:description" content="Multi-agent orchestration plugin for Claude Code. 19 specialized agents, 39 skills, full autonomous execution.">
   <meta property="og:image" content="https://yeachan-heo.github.io/oh-my-claudecode-website/social-preview.jpg">
   <meta property="og:image:width" content="1280">
   <meta property="og:image:height" content="640">
@@ -19,7 +19,7 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="oh-my-claudecode - A weapon, not a tool">
-  <meta name="twitter:description" content="Multi-agent orchestration plugin for Claude Code. 19 specialized agents, 36 skills.">
+  <meta name="twitter:description" content="Multi-agent orchestration plugin for Claude Code. 19 specialized agents, 39 skills.">
   <meta name="twitter:image" content="https://yeachan-heo.github.io/oh-my-claudecode-website/social-preview.jpg">
 
   <title>oh-my-claudecode - A weapon, not a tool</title>
@@ -2179,7 +2179,7 @@
           <span class="gradient-text">A weapon, not a tool</span>
         </p>
         <p class="hero__description hero-entrance hero-entrance--3">
-          Multi-AI orchestration plugin for Claude Code. Coordinate Claude, Gemini, and Codex with 19 specialized agents, 36 skills, and MCP-powered tools.
+          Multi-AI orchestration plugin for Claude Code. Coordinate Claude, Gemini, and Codex with 19 specialized agents, 39 skills, and MCP-powered tools.
         </p>
         <div class="hero-stats hero-entrance hero-entrance--3" style="--reveal-delay: 150ms">
           <a href="https://github.com/yeachan-heo/oh-my-claudecode" class="hero-stat-badge" target="_blank" rel="noopener" aria-label="GitHub Stars">
@@ -2243,82 +2243,82 @@
     </div>
   </section>
 
-<!-- What's New in v4.13.0 Section -->
+<!-- What's New in v4.14.4 Section -->
 <section id="whats-new" class="section whats-new-section" aria-labelledby="whats-new-title">
   <div class="section__header" data-reveal="fade-up">
     <div class="whats-new-badge">
       <span class="whats-new-badge__label">NEW</span>
-      <span class="whats-new-badge__version">v4.13.0</span>
+      <span class="whats-new-badge__version">v4.14.4</span>
     </div>
-    <h2 id="whats-new-title" class="section__title">What's New in 4.13.0</h2>
-    <p class="section__subtitle">Autoresearch as a skill, hooks library sync, Windows spawn fixes, deep-interview threshold alignment, and 15+ fixes across 25 PRs.</p>
+    <h2 id="whats-new-title" class="section__title">What's New in 4.14.4</h2>
+    <p class="section__subtitle">Native Windows hook manifest fixes, durable Ultragoal, Claude goal workflow polish, plugin/runtime hardening, and safer cleanup guardrails across the v4.14 series.</p>
   </div>
 
   <div class="whats-new-layout" data-reveal="fade-up" data-reveal-delay="100">
     <div class="whats-new-highlights">
       <article class="whats-new-card whats-new-card--premium" data-tilt data-reveal="fade-up" data-reveal-delay="200">
-        <div class="whats-new-card__icon whats-new-card__icon--feature">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-        </div>
-        <div>
-          <h3 class="whats-new-card__title">Autoresearch as a Skill</h3>
-          <p class="whats-new-card__desc">The autoresearch feature is now a proper skill instead of raw enforcement. Better integration with the skill system, preserved enforcement visibility across session state, and cleaner migration path for existing users.</p>
-        </div>
-      </article>
-
-      <article class="whats-new-card whats-new-card--premium" data-tilt data-reveal="fade-up" data-reveal-delay="250">
         <div class="whats-new-card__icon whats-new-card__icon--security">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
         </div>
         <div>
-          <h3 class="whats-new-card__title">Hooks Library Sync</h3>
-          <p class="whats-new-card__desc">Installer now properly copies hooks library modules during updates. Ensures your hooks stay synchronized with the main codebase, preventing version mismatches and stale artifacts.</p>
+          <h3 class="whats-new-card__title">Native Windows Hook Manifest Hotfix</h3>
+          <p class="whats-new-card__desc">Plugin hook manifests now call <code>node "$CLAUDE_PLUGIN_ROOT"/scripts/run.cjs</code> directly on Windows, avoiding <code>sh</code>, <code>/bin/sh</code>, and <code>find-node.sh</code> launch regressions.</p>
+        </div>
+      </article>
+
+      <article class="whats-new-card whats-new-card--premium" data-tilt data-reveal="fade-up" data-reveal-delay="250">
+        <div class="whats-new-card__icon whats-new-card__icon--feature">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <div>
+          <h3 class="whats-new-card__title">Durable Ultragoal Workflow</h3>
+          <p class="whats-new-card__desc"><code>omc ultragoal</code> now persists multi-goal plans and ledgers under <code>.omc/ultragoal</code>, with fail-closed checkpointing and Claude Code <code>/goal</code> handoff guidance.</p>
         </div>
       </article>
 
       <article class="whats-new-card whats-new-card--premium" data-tilt data-reveal="fade-up" data-reveal-delay="300">
         <div class="whats-new-card__icon whats-new-card__icon--feature">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><polyline points="8 21 12 17 16 21"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
         </div>
         <div>
-          <h3 class="whats-new-card__title">Windows Spawn Fixes</h3>
-          <p class="whats-new-card__desc">Fixed <code>EINVAL</code> errors when spawning npm/npx on Windows. Plugin-patterns now correctly passes <code>shell: true</code> on win32 systems, resolving spawn issues in plugin workflows.</p>
+          <h3 class="whats-new-card__title">Goal Workflow Polish</h3>
+          <p class="whats-new-card__desc">The v4.14 line clarifies Claude <code>/goal</code> boundaries, maps goal artifacts to OMC storage roots, and improves durable workflow UX across sessions.</p>
         </div>
       </article>
 
       <article class="whats-new-card whats-new-card--premium" data-tilt data-reveal="fade-up" data-reveal-delay="350">
         <div class="whats-new-card__icon whats-new-card__icon--feature">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><polyline points="8 21 12 17 16 21"/></svg>
         </div>
         <div>
-          <h3 class="whats-new-card__title">Deep-Interview Threshold Alignment</h3>
-          <p class="whats-new-card__desc">Threshold rendering now stays aligned with live settings across all render paths. Raw-skill contract explicitly defines the threshold, ensuring consistent behavior between shipped and development versions.</p>
+          <h3 class="whats-new-card__title">Plugin &amp; Runtime Reliability</h3>
+          <p class="whats-new-card__desc">Plugin cache repair, registry alignment, command wrapper preservation, and update-check cache paths are hardened so marketplace and CLI updates stay consistent.</p>
         </div>
       </article>
 
       <article class="whats-new-card whats-new-card--premium" data-tilt data-reveal="fade-up" data-reveal-delay="400">
-        <div class="whats-new-card__icon whats-new-card__icon--feature">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <div class="whats-new-card__icon whats-new-card__icon--security">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
         </div>
         <div>
-          <h3 class="whats-new-card__title">Ralph/Plan State Loop Fix</h3>
-          <p class="whats-new-card__desc">Prevented post-ralplan team follow-ups from looping back into planning. Fixed state management issue that could cause repetitive planning cycles after completing the initial ralplan phase.</p>
+          <h3 class="whats-new-card__title">Safer Cleanup Guardrails</h3>
+          <p class="whats-new-card__desc">Destructive worktree cleanup and teleport removal paths now require safer path validation and fallbacks before deleting local state.</p>
         </div>
       </article>
 
       <article class="whats-new-card whats-new-card--premium" data-tilt data-reveal="fade-up" data-reveal-delay="450">
         <div class="whats-new-card__icon whats-new-card__icon--feature">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
         </div>
         <div>
-          <h3 class="whats-new-card__title">Windows HUD & Multi-Repo Fixes</h3>
-          <p class="whats-new-card__desc">Fixed Windows HUD npm root discovery and MSYS2 shell compatibility. Multi-repo workspace context now preserved for CLI team handoffs. OMC state paths resolve from the real project root.</p>
+          <h3 class="whats-new-card__title">Windows Team &amp; HUD Hardening</h3>
+          <p class="whats-new-card__desc">Windows HUD, PowerShell team worker startup, native Claude version detection, and hook shutdown paths are more portable across shells and platforms.</p>
         </div>
       </article>
     </div>
 
     <div class="whats-new-cta" data-reveal="fade-up" data-reveal-delay="500">
-      <a href="https://github.com/yeachan-heo/oh-my-claudecode/releases/tag/v4.13.0" class="btn btn--primary" target="_blank" rel="noopener">View Release Notes</a>
+      <a href="https://github.com/yeachan-heo/oh-my-claudecode/releases/tag/v4.14.4" class="btn btn--primary" target="_blank" rel="noopener">View Release Notes</a>
       <a href="https://github.com/yeachan-heo/oh-my-claudecode/blob/main/CHANGELOG.md" class="btn btn--secondary" target="_blank" rel="noopener">Full Changelog</a>
     </div>
   </div>
@@ -2425,7 +2425,7 @@
   <section id="installation" class="section install-section" aria-labelledby="install-title">
     <div class="section__header" data-reveal="fade-up">
       <h2 id="install-title" class="section__title">Get Started in Seconds</h2>
-      <p class="section__subtitle">Install via Claude Code plugin marketplace, or use the npm package directly: <code>oh-my-claude-sisyphus@4.13.0</code>.</p>
+      <p class="section__subtitle">Install via Claude Code plugin marketplace, or use the npm package directly: <code>oh-my-claude-sisyphus@4.14.4</code>.</p>
     </div>
 
     <div class="install-flow" data-reveal="stagger">
@@ -2464,13 +2464,13 @@
                 <span class="code-block__dot code-block__dot--yellow"></span>
                 <span class="code-block__dot code-block__dot--green"></span>
               </div>
-              <button class="code-block__copy" data-copy="npm install -g oh-my-claude-sisyphus@4.13.0" aria-label="Copy command">
+              <button class="code-block__copy" data-copy="npm install -g oh-my-claude-sisyphus@4.14.4" aria-label="Copy command">
                 Copy
               </button>
             </div>
             <div class="code-block__content">
               <code><span class="comment"># CLI install via npm:</span><br>
-  npm install -g oh-my-claude-sisyphus@4.13.0</code>
+  npm install -g oh-my-claude-sisyphus@4.14.4</code>
             </div>
           </div>
         </div>
